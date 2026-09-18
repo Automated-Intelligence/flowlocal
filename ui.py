@@ -60,7 +60,8 @@ class FlowUI:
 
         self.win = tk.Toplevel(self.root)
         self.win.title("FlowLocal")
-        self.win.geometry("720x520")
+        self.win.geometry("740x710")
+        self.win.minsize(640, 560)
         self.win.protocol("WM_DELETE_WINDOW", self.win.withdraw)
 
         nb = ttk.Notebook(self.win)

@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/icon.png" width="96" alt="FlowLocal"></p>
+
 # FlowLocal
 
 ### ⬇️ [Download FlowLocal-win64.zip](https://github.com/Automated-Intelligence/flowlocal/releases/latest) — no install, no Python needed
@@ -24,6 +26,47 @@ sent to the cloud, and there's nothing to pay for.
 The AI rewrite features use a local model through [Ollama](https://ollama.com)
 (also free and offline). Without Ollama installed, FlowLocal simply pastes the
 raw transcription — everything else works.
+
+## Screenshots
+
+| Settings — everything applies live | History — every dictation, click to copy |
+| --- | --- |
+| ![Settings window](docs/settings.png) | ![History window](docs/history.png) |
+
+## Two kinds of AI rewriting
+
+Both run on your own GPU through Ollama, and both can be set to any tone:
+**professional**, **clean**, **friendly**, **concise**, or **custom** (your own
+instruction, e.g. "rewrite as a short polite text message").
+
+### 1. Rewrite tone — polishes everything you dictate
+
+Applied automatically to each dictation before it's typed. Speech is messy;
+this makes it read like you typed it.
+
+| Tone | You said | You get |
+| --- | --- | --- |
+| **clean** (default) | "so basically send the report on Tuesday no wait Wednesday because Tuesday I have that meeting with the the contractor guy" | "So basically send the report on Wednesday because Tuesday I have that meeting with the contractor guy." |
+| **professional** | *same* | "We should send the report on Wednesday instead of Tuesday, as I have a meeting with the contractor on Tuesday." |
+| **concise** | *same* | "Send the report Wednesday; I have a contractor meeting Tuesday." |
+| **off** | *same* | the raw transcription, filler words removed |
+
+`clean` keeps your own words and only fixes grammar, false starts, and
+self-corrections. `professional` rewrites the wording. Setting: **Rewrite
+tone** in Settings (`rewrite_tone`).
+
+### 2. Rewrite-selection tone — fix text that's already written
+
+Highlight any text in any app — an email draft, a chat message, a document —
+press **F10**, and it's replaced in place with a rewrite. No dictation
+involved; it works on anything you or someone else typed.
+
+> **Before:** "hey the guy never showed, kinda annoying, we already paid 250 bucks for this"
+> **After (professional):** "The individual did not attend as scheduled. This is concerning, as we have already paid $250 for this service."
+
+The key and tone are independent of dictation: **Rewrite-selection key** and
+**Rewrite-selection tone** in Settings (`rewrite_selection_hotkey`,
+`rewrite_selection_tone`). Your clipboard is restored afterwards.
 
 ## Download (no Python needed)
 
