@@ -257,7 +257,7 @@ class FlowUI:
             frame,
             text="Smart spacing (space between back-to-back dictations)",
             variable=self.vars["smart_spacing"]).grid(
-            row=19, column=1, sticky="w", pady=4, padx=(10, 0))
+            row=19, column=1, columnspan=2, sticky="w", pady=4, padx=(10, 0))
 
         frame.columnconfigure(1, weight=1)
         ttk.Button(frame, text="Save", command=lambda: self._save(silent=False)).grid(
@@ -265,7 +265,8 @@ class FlowUI:
         ttk.Label(frame,
                   text="Everything applies live — text fields on Enter or when "
                        "you click away. No restarts.",
-                  foreground="#888").grid(row=21, column=1, sticky="w", padx=(10, 0))
+                  foreground="#888").grid(row=21, column=1, columnspan=2,
+                                          sticky="w", padx=(10, 0))
 
         # auto-apply discrete controls (checkboxes / readonly dropdowns) on change
         self._autosave_job = None
