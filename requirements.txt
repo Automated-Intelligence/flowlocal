@@ -1,0 +1,12 @@
+faster-whisper
+sounddevice
+numpy
+keyboard
+mouse
+pyperclip
+pystray
+pillow
+psutil
+# NVIDIA GPU acceleration (harmless on CPU-only machines)
+nvidia-cublas-cu12
+nvidia-cudnn-cu12

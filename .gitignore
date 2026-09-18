@@ -1,0 +1,12 @@
+# personal / runtime state — never publish
+config.json
+history.jsonl
+*.log
+
+# environments and build output
+venv/
+build/
+dist/
+__pycache__/
+*.pyc
+*.zip
